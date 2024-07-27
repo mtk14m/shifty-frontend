@@ -59,13 +59,16 @@ const NavBar = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false); // Fonction pour fermer le menu
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
-
-  // Fonction pour fermer le menu lors du clic sur un lien
+ const closeDropdown = () => {setIsDropdownOpen(false); closeMenu()}
+   // Fonction pour fermer le menu lors du clic sur un lien
   const handleLinkClick = () => {
     if (window.innerWidth < 768) { // On vérifie si la largeur de l'écran est inférieure à 768px (taille de tablette/mobile)
       closeMenu();
+      closeDropdown();
     }
   };
+
+
 
   return (
     <div className="bg-white shadow-md py-4 fixed top-0 left-0 w-full z-50">
@@ -216,10 +219,10 @@ const ScrollToggleButton = () => {
     }
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
+    // Fonction pour le scroll vers le haut
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
   return (
     <div className="fixed bottom-8 right-8 flex flex-col items-center space-y-2">
       <button

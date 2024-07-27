@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { authenticateUser } from "../session.server";
 import { getOptionalUser } from "../auth.server";
-import GoogleLogo from "../../public/google-logo.svg"; // Assurez-vous que vous avez ce fichier ou remplacez par le chemin correct
+import GoogleLogo from "@/assets/google-logo.svg"; // Assurez-vous que vous avez ce fichier ou remplacez par le chemin correct
 
 // Définir le schéma de validation pour les données de connexion
 const registerSchema = z.object({

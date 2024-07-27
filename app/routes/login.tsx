@@ -7,7 +7,7 @@ import { getOptionalUser } from "../auth.server";
 import { Input } from "@/components/ui/input"; // Importer les composants de ShadCN UI
 import { Button } from "@/components/ui/button"; // Importer les composants de ShadCN UI
 import { useOptionalUser } from "~/root";
-import GoogleLogo from "../../public/google-logo.svg"; // Assurez-vous que vous avez ce fichier ou remplacez par le chemin correct
+import GoogleLogo from "@/assets/google-logo.svg"; // Assurez-vous que vous avez ce fichier ou remplacez par le chemin correct
 
 // Définir le schéma de validation pour les données de connexion
 const loginSchema = z.object({
@@ -171,3 +171,6 @@ const LoginForm = () => {
     </div>
   );
 };
+
+
+
