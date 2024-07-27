@@ -37,3 +37,23 @@ export const logout = async ({ request }: { request: Request }) => {
     },
   });
 }
+
+export const authenticateUser = async ({
+  request,
+  userToken,
+}:{
+  request: Request,
+  userToken: string
+})=>{
+  const createdSession = await commitUserToken({
+    request, 
+    userToken
+  })
+
+  // Définir le cookie avec le token d'utilisateur
+  return redirect( '/', {
+    headers: {
+      'Set-Cookie': createdSession
+    },
+  });
+}
