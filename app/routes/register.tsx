@@ -4,7 +4,7 @@ import { json, redirect } from "@remix-run/node";
 import { z } from 'zod';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { authenticateUser } from "../session.server";
+import { authenticateUser } from "../server/session.server";
 import { getOptionalUser } from "../auth.server";
 import GoogleLogo from "@/assets/google-logo.svg"; // Assurez-vous que vous avez ce fichier ou remplacez par le chemin correct
 

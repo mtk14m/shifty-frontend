@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { getUserToken, logout } from './session.server';
+import { getUserToken, logout } from './server/session.server';
 
 const getAuthentificateUserSchema = z.object({
   id: z.string(),

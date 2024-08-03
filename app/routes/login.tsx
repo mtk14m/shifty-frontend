@@ -2,7 +2,7 @@ import type { MetaFunction, ActionFunctionArgs, LoaderFunctionArgs } from "@remi
 import { Form, Link, useActionData, useNavigation } from "@remix-run/react";
 import { json, redirect } from "@remix-run/node";
 import { z } from 'zod';
-import { authenticateUser } from "../session.server";
+import { authenticateUser } from "../server/session.server";
 import { getOptionalUser } from "../auth.server";
 import { Input } from "@/components/ui/input"; // Importer les composants de ShadCN UI
 import { Button } from "@/components/ui/button"; // Importer les composants de ShadCN UI

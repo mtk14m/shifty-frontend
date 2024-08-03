@@ -1,7 +1,7 @@
 import type { MetaFunction, ActionFunctionArgs, LoaderFunctionArgs } from "@remix-run/node";
 import { json, redirect } from "@remix-run/node";
 import { z } from 'zod';
-import { authenticateUser } from "../session.server";
+import { authenticateUser } from "../server/session.server";
 import { getOptionalUser } from "../auth.server";
 
 import { useOptionalUser } from "~/root";
@@ -76,7 +76,6 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 export default function Index() {
   const user = useOptionalUser();
   const isConnected = user !== null;
-  console.log(user)
   return (
     <div className="font-sans">
       <div className="flex flex-col items-center pt-24">
