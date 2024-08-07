@@ -66,4 +66,17 @@
   body {
     @apply bg-background text-foreground;
   }
+} 
+.ellipsis {
+  white-space: nowrap; /* Empêche le texte de passer à la ligne suivante */
+  overflow: hidden; /* Cache le texte qui dépasse la largeur */
+  text-overflow: ellipsis; /* Ajoute des points de suspension à la fin du texte */
+}
+
+.description, .bio {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Nombre de lignes à afficher avant d'ajouter des ellipses */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
